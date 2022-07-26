@@ -81,7 +81,7 @@
     "webpack-rtl-plugin": "^2.0.0"
   },
   "engine": {
-    "node": "v16.14.2",
+    "node": "16.14.2",
     "npm": "8.5.0"
   }
 }
