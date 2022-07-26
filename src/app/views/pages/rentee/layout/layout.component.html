@@ -1,0 +1,30 @@
+<nav class="main-heading mb-4">
+  <div class="content d-flex justify-content-between align-items-center w-100">
+    <p class="tx-16 fw-bolder align-self-center">Add Rentee</p>
+<!--    <div>-->
+<!--      <button type="button" class="btn btn-dark" (click)="openBasicModal(configModal)">Add New</button>-->
+<!--    </div>-->
+  </div>
+</nav>
+
+<div class="card">
+  <div class="card-body">
+    <div class="d-flex align-items-center flex-wrap">
+      <button type="button" class="btn btn-outline-secondary" [ngClass]="{'active' : showBasic}" (click)="showBasic = true; showRooms = false; showRent = false; ">Basic Details</button>
+      <button type="button" class="btn btn-outline-secondary mx-3" [ngClass]="{'active' : showRooms}" (click)="showRooms = true; showBasic = false; showRent = false; ">Room Details</button>
+      <button type="button" class="btn btn-outline-secondary" [ngClass]="{'active' : showRent}" (click)="showRooms = false; showBasic = false; showRent = true; ">Rent Details</button>
+    </div>
+  </div>
+</div>
+
+<!--<div class="card">-->
+<!--  <div class="card-body">-->
+    <div class="mt-4">
+      <app-basic-details *ngIf="showBasic" class="w-100"></app-basic-details>
+      <app-room-details *ngIf="showRooms" class="w-100"></app-room-details>
+      <app-rent-details *ngIf="showRent" class="w-100"></app-rent-details>
+    </div>
+<!--  </div>-->
+<!--</div>-->
+
+
