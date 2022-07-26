@@ -14,10 +14,10 @@
         <div class="col-12 col-md-6 col-lg-4">
           <div class="mb-3">
             <div class="d-flex align-items-center justify-content-between">
-              <label class="form-label" for="formFile">File upload <span class="text-danger">*</span></label>
-              <i class="feather icon-image cursor-pointer" (click)="openBasicModal(configModal)"></i>
+              <label class="form-label" for="formFile">Profile Pic <span class="text-danger">*</span></label>
+              <i class="feather icon-image cursor-pointer" *ngIf="basicDetails.get('profile_pic')?.value" (click)="openBasicModal(configModal)"></i>
             </div>
-            <input class="form-control" type="file" id="formFile" formControlName="profile_pic">
+            <input class="form-control" type="file" id="formFile" (change)="getBase64($event)">
           </div>
         </div>
         <div class="col-12 col-md-6 col-lg-4">
@@ -127,7 +127,7 @@
     <button type="button" class="btn-close" (click)="modal.close('by: close icon')" aria-label="Close"></button>
   </div>
   <div class="modal-body">
-    <img [src]="basicDetails.get('profile_pic')?.value" />
+    <img [src]="basicDetails.get('profile_pic')?.value" class="w-100" />
   </div>
   <div class="modal-footer">
     <button type="button" class="btn btn-danger" (click)="closeModal(configModal)">Close</button>

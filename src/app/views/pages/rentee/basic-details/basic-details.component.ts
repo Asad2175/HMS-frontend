@@ -13,13 +13,6 @@ export class BasicDetailsComponent implements OnInit {
   profilePicCloseResult: string = '';
   basicDetails: FormGroup;
   isAdd = false;
-  imageUrl: string = 'assets/images/others/placeholder.jpg';
-  resultImage: any;
-
-  // Plugin configuration
-  config = {
-    zoomable: false
-  };
 
   constructor(private modalService: NgbModal,
               private fb: FormBuilder) {
@@ -43,6 +36,19 @@ export class BasicDetailsComponent implements OnInit {
   }
 
   ngOnInit(): void {
+  }
+
+  getBase64 = (event: any) => {
+    let me = this;
+    let file = event.target.files[0];
+    let reader = new FileReader();
+    reader.readAsDataURL(file);
+    reader.onload = function () {
+      me.basicDetails.get('profile_pic')?.setValue(reader.result);
+    };
+    reader.onerror = function (error) {
+      console.log('Error: ', error);
+    };
   }
 
   openBasicModal(content: TemplateRef<any>) {
