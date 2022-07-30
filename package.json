@@ -33,7 +33,6 @@
     "@sweetalert2/ngx-sweetalert2": "^10.0.0",
     "@swimlane/ngx-datatable": "^20.0.0",
     "angular-archwizard": "^7.0.0",
-    "angular-cropperjs": "^1.0.2",
     "animate.css": "^4.1.1",
     "apexcharts": "^3.32.1",
     "bootstrap": "^5.1.3",
