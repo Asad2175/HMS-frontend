@@ -1,11 +1,11 @@
-/* You can add global styles to this file, and also import other style files */
-
-
-// Global icon font
+///* You can add global styles to this file, and also import other style files */
+//
+//
+//// Global icon font
 @import "./assets/fonts/feather/style.css";
-
-
-// // 3rd party plugins
+//
+//
+//// // 3rd party plugins
 @import "~@mdi/font/css/materialdesignicons.min.css";
 @import '~perfect-scrollbar/css/perfect-scrollbar.css';
 @import "~highlight.js/styles/googlecode.css";
@@ -25,15 +25,15 @@
 @import '~@swimlane/ngx-datatable/index.css';
 @import '~@swimlane/ngx-datatable/themes/bootstrap.css';
 @import '~@swimlane/ngx-datatable/assets/icons.css';
-
-
-// NobleUI styles for LTR
+//
+//
+//// NobleUI styles for LTR
 @import "./assets/scss/style";
-
-
-// NobleUI styles For RTL
-// @import "./assets/scss/style.rtl.css";
-
+//
+//
+//// NobleUI styles For RTL
+//// @import "./assets/scss/style.rtl.css";
+//
 .main-wrapper .page-wrapper .page-content {
   padding-top: 0 !important;
 }
