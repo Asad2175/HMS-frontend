@@ -1,7 +1,6 @@
 import {Component, OnInit, TemplateRef, ViewChild} from '@angular/core';
 import {NgbModal} from "@ng-bootstrap/ng-bootstrap";
 import {FormBuilder, FormGroup, Validators} from "@angular/forms";
-import {CropperComponent} from "angular-cropperjs";
 
 @Component({
   selector: 'app-basic-details',
@@ -9,7 +8,6 @@ import {CropperComponent} from "angular-cropperjs";
   styleUrls: ['./basic-details.component.scss']
 })
 export class BasicDetailsComponent implements OnInit {
-  @ViewChild('angularCropper') public angularCropper: CropperComponent;
   profilePicCloseResult: string = '';
   basicDetails: FormGroup;
   isAdd = false;

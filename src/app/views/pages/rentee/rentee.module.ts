@@ -6,7 +6,6 @@ import { BasicDetailsComponent } from './basic-details/basic-details.component';
 import { LayoutComponent } from './layout/layout.component';
 import { RoomDetailsComponent } from './room-details/room-details.component';
 import {ReactiveFormsModule} from "@angular/forms";
-import {AngularCropperjsModule} from "angular-cropperjs";
 import { RentDetailsComponent } from './rent-details/rent-details.component';
 
 
@@ -21,7 +20,6 @@ import { RentDetailsComponent } from './rent-details/rent-details.component';
         CommonModule,
         RenteeRoutingModule,
         ReactiveFormsModule,
-        AngularCropperjsModule
     ]
 })
 export class RenteeModule { }
